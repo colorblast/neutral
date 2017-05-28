@@ -1,0 +1,70 @@
+h1{
+    font-family: "Source Code Pro", monospace;
+    font-size: 10vw;
+    text-align: center;
+    padding-top: 10vw;
+}
+h2{
+    text-align:center;
+    font-family: "Roboto Slab", serif;
+}
+p{
+    font-family: "Roboto Slab", serif;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    text-indent: 4vw;
+    padding-bottom: 4vw;
+}
+body{  
+    color: white;
+}
+.section1{
+    background: rgba(255,59,48,1);
+    height: 60vw;
+}
+.section2{
+    background: rgba(255,204,0,1);
+}
+.section3{
+    background: rgba(90,200,250,1);
+}
+.section4{
+    background: rgba(0,122,255,1);
+}
+.section5{
+    background: rgba(88,86,214,1);
+}
+.section6{
+    background: rgba(255,45,85,1);
+}
+.section7{
+    background: rgba(255,149,0,1);
+}
+.area51{
+    color: black;
+}
+section{
+    width: 100vw;
+    height: 80vw;
+    margin-left: -2vw;
+    margin-right: -2vw;
+    margin-top: -9vw;
+}
+.container{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.arg{
+    font-size: 2vw;
+}
+.fa{
+    margin-top: 12vw;
+    margin-left: 46vw;
+}
+.icon{
+    height: 5vw;
+    width: 5vw;
+}
+.first-icon{
+    margin-left: 47vw;
+}

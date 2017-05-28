@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>diagn0ser</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href='css/adventure.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300" rel="stylesheet">
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "prompts.json";
+
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                myArr = JSON.parse(xmlhttp.responseText);
+                console.log(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    </script>
+</head>
+<body>
+<div id="top"></div>    
+<div id="mount-point">The loading of this page took too long. Please initiate a soft refresh.</div>
+<script type="text/babel">
+function getP(string) {
+    return myArr['model'][string]['prompt'];
+}
+function getB(string) {
+    return myArr['model'][string]['buttontext'];
+}
+function getT(string) {
+    return myArr['model'][string]['text'];
+}
+
+var TitleScreen = React.createClass({
+    getInitialState: function(){
+        return {
+            string: '0',
+            prompt: 'Welcome to Dystopian Internet.',
+            buttonOne: 'Start',
+            buttonTwo: 'Admit it is futile',
+            showThree: false,
+            showButtons: true,
+            buttonThree: 'Some non-value',
+            text: ''
+        }
+    },
+    printOption: function(){
+        this.setState({
+          string: this.state.string + '0'
+        });
+        var prompt = getP(this.state.string + '0');
+        var buttons = getB(this.state.string + '0');
+        var thirdButton = false;
+        var showButtons = true;
+        var buttonThree = '';
+        if (buttons.length == 3) {
+            thirdButton = true;
+        }
+        var text = getT(this.state.string + '0');
+        if (text != '') {
+            showButtons = false;
+        }
+        this.setState({
+            prompt: prompt,
+            buttonOne: buttons[0],
+            buttonTwo: buttons[1],
+            showThree: thirdButton,
+            showButtons: showButtons,
+            buttonThree: buttonThree,
+            text: text
+        });
+    },
+    loginOption: function(){
+        this.setState({
+          string: this.state.string + '1'
+        });
+        var prompt = getP(this.state.string + '1');
+        var buttons = getB(this.state.string + '1');
+        var thirdButton = false;
+        var buttonThree = '';
+        var showButtons = true;
+        if (buttons.length == 3) {
+            thirdButton = true;
+        }
+        var text = getT(this.state.string + '1');
+        if (text != '') {
+            showButtons = false;
+        }
+        this.setState({
+            prompt: prompt,
+            buttonOne: buttons[0],
+            buttonTwo: buttons[1],
+            showThree: thirdButton,
+            showButtons: showButtons,
+            buttonThree: buttonThree,
+            text: text
+        });
+    },
+    otherOption: function(){
+        this.setState({
+          string: this.state.string + '2'
+        });
+        var prompt = getP(this.state.string + '2');
+        var buttons = getB(this.state.string + '2');
+        var thirdButton = false;
+        var buttonThree = '';
+        var showButtons = true;
+        if (buttons.length == 3) {
+            thirdButton = true;
+        }
+        var text = getT(this.state.string + '2');
+        if (text != '') {
+            showButtons = false;
+        }
+        this.setState({
+            prompt: prompt,
+            buttonOne: buttons[0],
+            buttonTwo: buttons[1],
+            showThree: thirdButton,
+            showButtons: showButtons,
+            buttonThree: buttonThree,
+            text: text
+        });
+    },
+    convertHTML: function(){
+        return {__html: this.state.text};
+    },
+    render: function(){
+        return (
+            <div className='my-component'>
+                <h1>This is diagn0ser</h1>
+                <h2>{this.state.prompt}</h2>
+                <div>
+                    {this.state.showButtons ?
+                    <div>
+                        <button type="button" onClick={this.printOption}>{this.state.buttonOne}</button>
+                        <button type="button" onClick={this.loginOption}>{this.state.buttonTwo}</button>
+                    </div> :
+                    null
+                    }
+                    {this.state.showThree ?
+                    <button type="button" onClick={this.otherOption}>{this.state.buttonThree}</button> :
+                    null
+                    }
+                    <div dangerouslySetInnerHTML={this.convertHTML()} />    
+                </div>
+            </div>    
+        );
+    }
+});
+
+ReactDOM.render(
+    <TitleScreen/>,
+    document.getElementById('mount-point')
+);
+</script>
+<noscript>I do apologize, but this site does require javascript to run. Please enable javascript in your browser settings.</noscript>
+</body>
+</html>
