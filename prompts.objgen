@@ -1,0 +1,49 @@
+model
+  0
+    prompt = Welcome to Dystopian Internet.
+    buttontext[] s = Start, Admit it is futile
+    text = 
+  00
+    prompt = You own a startup! You work very hard and are starting to see an earnings increase. Despite the odds, you have some limited entrepreneurial success.
+    buttontext[] s = Scale, Forget all the years of struggle that I went through to get to here
+    text = 
+  01
+    prompt = You admitted it was futile.
+    buttontext[] s =
+    text = Saved you a lot of pain. Better than most people.
+  000
+    prompt = You scale your company, and after a long marketing campaign, start to see results of that growth pay dividends. Your streaming service is doing well and its name is starting to become known.
+    buttontext[] s = Onwards! Continue Scaling, I don't like being rewarded for my efforts
+    text =
+  001
+    prompt = You wasted 12 years of your life.
+    buttontext[] s =
+    text = You quit and as a result of this sudden switch, your body can no longer tolerate the stress level, and you have a heart attack.
+  0000
+    prompt = Uh Oh. Customers that apparently use this ISP called lockISP are seeing much slower speeds. Given your relative newness to the market, this is causing a large decrease in market potential and earnings as the customers stick to the in-house options.
+    buttontext[] s = I shall not give up. Sue them for all its worth, All of this progress that I've made-- I now give up
+    text =
+  0001
+    prompt = You never get a chance again.
+    buttontext[] s =
+    text = Your lack of scaling costs you name recognition, and your startup becomes just a passing fad, as your dreams blow away into the wayside.
+  00000
+    prompt = You go to court. After a long drawn-out fight, your company wins. Of course, lockISP being rich, they appeal. The court proceedings have already created a significant amount of debt.
+    buttontext[] s= I don't care anymore. Keep suing them, I know which fights to win and lose and this doesn't look like one of them.
+    text =
+  000000
+    prompt = You win again, as your heavy lobbying from before pays off. But just like that, lockISP appeals again. They also offer a settlement, that is of low monetary value.
+    buttontext[] s= Take it, I shall stand resolute as a corporate martyr
+    text =
+  000001
+    prompt = You pull out.
+    buttontext[] s=
+    text = With the lack of name recognition, your company slowly dies out.   
+  0000000
+    prompt = You accepted the settlement.
+    buttontext[] s=
+    text = This does not in any way, alleviate the financial constraints the court proceedings placed upon your company, resulting in eventual dissolution.
+  0000001
+    prompt = You go bankrupt.
+    buttontext[] s =
+    text = Your company dissolves, as does you. You never mentally recover and you stay in a vegetative state.      
