@@ -15,6 +15,12 @@ p{
     text-indent: 4vw;
     padding-bottom: 4vw;
 }
+ol{
+    font-family: "Roboto Slab", serif;
+    margin-left: 32vw;
+    margin-right: 4vw;
+    padding-bottom: 4vw;
+}
 body{  
     color: white;
 }
@@ -67,4 +73,21 @@ section{
 }
 .first-icon{
     margin-left: 47vw;
+}
+button{
+    margin-left: 46vw;
+    width: 8vw;
+    height: 4vw;
+    opacity: 0.9;
+}
+button:hover{
+    opacity: 1;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.news{
+    width: 40vw;
+    margin-left: 5vw;
 }
