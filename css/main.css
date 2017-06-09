@@ -30,6 +30,7 @@ body{
 }
 .section2{
     background: rgba(255,204,0,1);
+    height: 90vw;
 }
 .section3{
     background: rgba(90,200,250,1);
@@ -73,6 +74,7 @@ section{
 }
 .first-icon{
     margin-left: 47vw;
+    padding-bottom: 10vw;
 }
 button{
     margin-left: 46vw;
